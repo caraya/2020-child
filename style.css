@@ -1,0 +1,139 @@
+/*
+ Theme Name:   Twenty Twenty Rivendellweb
+ Theme URI:    https://github.com/caraya/2020-child
+ Description:  Twenty Twenty Child Theme
+ Author:       Carlos Araya
+ Author URI:   https://publishing-project.rivendellweb.net/
+ Template:     twentytwenty
+ Version:      1.0.0
+ License:      MIT
+ License URI:  https://opensource.org/licenses/MIT
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  twentytwentyrivendellweb
+*/
+
+main {
+  counter-reset: figure_count;
+}
+
+p p {
+  text-indent: 2em
+}
+
+.small {
+  font-size: 90%
+}
+
+figure {
+  counter-increment: figure_count;
+  margin: 2em auto;
+  max-width: 600px;
+  max-width: -moz-min-content;
+  max-width: -webkit-min-content;
+  max-width: min-content
+}
+
+figure figcaption {
+  color: #999;
+  font-size: 80%
+}
+
+figure img {
+  max-width: inherit
+}
+
+figure section {
+	width: 800px;
+	max-height: 600px;
+}
+
+
+li code,
+p code {
+	display: inline;
+}
+
+video,
+object {
+  clear: both;
+  display: block;
+  margin: 1em auto;
+  max-width: 100% !important;
+	height: auto !important;
+}
+
+div.video iframe {
+  clear: both;
+  display: block;
+  margin: 1em auto;
+  max-width: inherit;
+  text-align: center
+}
+
+div.video p {
+  font-style: italic;
+  font-weight: 700;
+  margin-top: -.125em
+}
+
+iframe {
+  margin: 1.5em 0
+}
+
+.amp-link {
+	font-size: 80%;
+	text-align:right;
+}
+
+table,
+th,
+tr,
+td {
+  border: 1px solid #000
+}
+
+tr td:first-child {
+  width: 38%
+}
+
+tr td:last-child {
+  width: 20%
+}
+
+/* Informational messages */
+.message {
+  border: 1px solid black;
+  border-radius: 10px;
+  display: block;
+  padding: .5em;
+  margin: 1em 0;
+}
+
+.message.info {
+  background-color: lightblue;
+}
+
+.message.info p:first-of-type::before {
+  content: "Note: \A\A";
+  clear: both;
+  font-size: 1.5em;
+  font-weight: bold;
+  white-space: pre;
+}
+
+.message.warning {
+  background-color: lightyellow;
+}
+
+.message.warning p:first-of-type::before {
+  content: "Warning: \A\A";
+  clear: both;
+  font-size: 1.5em;
+  font-weight: bold;
+  white-space: pre;
+} */
+
+.message.danger {
+  background-color: indianred;
+}
+
