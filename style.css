@@ -12,12 +12,26 @@
  Text Domain:  twentytwentyrivendellweb
 */
 
-main {
+article {
   counter-reset: figure_count;
 }
 
-p p {
-  text-indent: 2em
+.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+	max-width: 960px;
+}
+
+.post-meta-edit-link-wrapper {
+  margin-left: 0;
+}
+
+header p.blog-title {
+  margin-left: 3rem;
+  margin-top: 3rem;
+  font-size: 2rem;
+}
+
+p + p {
+  text-indent: 2.5em
 }
 
 .small {
@@ -25,7 +39,6 @@ p p {
 }
 
 figure {
-  counter-increment: figure_count;
   margin: 2em auto;
   max-width: 600px;
   max-width: -moz-min-content;
@@ -33,20 +46,19 @@ figure {
   max-width: min-content
 }
 
+figure img {
+  max-width: inherit
+}
+
 figure figcaption {
   color: #999;
   font-size: 80%
 }
 
-figure img {
-  max-width: inherit
+figure figcaption::before {
+  counter-increment: figure_count;
+  content: "Figure " counter(figure_count) ": ";
 }
-
-figure section {
-	width: 800px;
-	max-height: 600px;
-}
-
 
 li code,
 p code {
@@ -106,13 +118,12 @@ tr td:last-child {
   border-radius: 10px;
   display: block;
   padding: .5em;
-  margin: 1em 0;
 }
 
 .message.info {
   background-color: lightblue;
 }
-
+/*
 .message.info p:first-of-type::before {
   content: "Note: \A\A";
   clear: both;
@@ -120,20 +131,28 @@ tr td:last-child {
   font-weight: bold;
   white-space: pre;
 }
-
+ */
 .message.warning {
   background-color: lightyellow;
 }
 
-.message.warning p:first-of-type::before {
+/* .message.warning p:first-of-type::before {
   content: "Warning: \A\A";
   clear: both;
   font-size: 1.5em;
   font-weight: bold;
   white-space: pre;
-} */
-
+}
+ */
 .message.danger {
   background-color: indianred;
 }
 
+/* .message.danger p:first-of-type::before {
+  content: "Danger: \A\A";
+  clear: both;
+  font-size: 1.5em;
+  font-weight: bold;
+  white-space: pre;
+}
+ */
