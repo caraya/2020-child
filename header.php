@@ -25,14 +25,6 @@
 	</head>
 
 	<body <?php body_class(); ?>>
-	<?php
-		if ( is_page_template( array( 'templates/template-canvas.php' ) ) ) {
-		?>
-		<header id="site-header" class="header-footer-group" role="banner">
-  	  <p class="blog-title"><strong><a href="<?php bloginfo('url')?>"><?php bloginfo('name')?></a></strong> &mdash; <?php bloginfo('description')?></p>
-		</header><!-- #site-header -->
-
-		<?php } elseif ( ! is_page_template( array( 'templates/template-canvas.php' ) ) ) { ?>
 			<!DOCTYPE html>
 
 <html class="no-js" <?php language_attributes(); ?>>
@@ -210,10 +202,4 @@
 		// Output the menu modal.
 		get_template_part( 'template-parts/modal-menu' );
 
-		?>
-
-		<?php
-			// Output the menu modal
-			get_template_part( 'template-parts/modal-menu' );
-		}
 		?>
